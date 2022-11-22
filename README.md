@@ -24,6 +24,7 @@ The user will play against the computer and the project is called SimpleBJ.
     * [**Header**](<#header>)
     * [**Body**](<#body>)
     * [**Footer**](<#footer>)
+    * [**Displaying Cards**](<#displaying-cards>)
     * [**Error 404**](<#error-404>)
     * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -119,7 +120,7 @@ Before starting coding, I wanted to have a big picture of the programming struct
       The font chosen were 'Delius' for all the content of the website. I have chosen
       to import the font directly from the .ttf file to avoid any problem of compatibility
       in the future.
-      
+
       ![Import font](assets/images/readme-images/font-delius.png)
 
  * ### Colour Scheme
@@ -217,6 +218,33 @@ This area is dedicated to show the title of the game. Also this area is also use
 
   ### Footer Info
 The footer contains informations as copyright and Name of the game
+
+[Back to top](<#contents>)
+
+* ## Displaying Cards
+
+  ### How do we display the Card of the Game?
+I created a Table with all the name of each Card :
+(All images of cards are stored in assets/images/, 
+Example 09-carreau.png, 011-carreau.png, 06-coeur.png).
+
+Extra Info : I used cards starting by 00 as a undisplayed card.
+
+![Table of Cards](assets/images/readme-images/table-of-card.png)
+
+To display a Card, I use :
+- innerHTML Attribute to display the image
+- Alt attribute to storage the points of each Card 
+- The ID attribute with "ImageCard" as a base name + (1,2 or 3 means first, second or third Card) + "Player1" or "Player2"
+
+So for example, we can reach the points of the third card of the Player 2 (Computer) like this :
+parseInt(document.getElementById('ImageCard3player2').alt
+
+ We generate a number between 0 and 3 to display a random card with selected Points -carreau, -coeur, -pique OR -trefle
+  
+    - let SelectRandomCardWithSamePoints = Math.floor(Math.random() * 4);
+
+![Display Cards](assets/images/readme-images/display-card.png)
 
 [Back to top](<#contents>)
 

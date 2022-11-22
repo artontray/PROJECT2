@@ -16,8 +16,6 @@
          }else{
             CardFaceItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">`;
          }
-            
-             
      }
  }
  //Displaying Cards images into the Help Bubble
@@ -223,7 +221,12 @@
      // We create the img src element into the DOM to display the card
      // The points of the card is stored into the Alt attribute of the image
      let ImageCard = document.createElement('div');
-     ImageCard.innerHTML = `<img src="assets/images/` + CarteTable[Card][SelectRandomCardWithSamePoints] + `.png" alt="` + Points + `" id="ImageCard` + WhichCard + Player + `">`;
+     ImageCard.innerHTML = `<img src="assets/images/` 
+     + CarteTable[Card][SelectRandomCardWithSamePoints]
+     + `.png" alt="` + Points 
+     + `" id="ImageCard` + WhichCard + Player 
+     + `">`;
+
      let Image = document.getElementById('card' + WhichCard + '-' + Player);
      Image.appendChild(ImageCard);
  }
@@ -250,9 +253,7 @@
             soundYouWin.play();
         }else{
             soundYouLoose.play();
-        }
-
-             
+        } 
      }
      document.getElementById("ShowResult").remove();
      let NewDiv = document.createElement('div');
