@@ -26,6 +26,7 @@ The user will play against the computer and the project is called SimpleBJ.
     * [**Footer**](<#footer>)
     * [**Displaying Cards**](<#displaying-cards>)
     * [**Loading a New Game**](<#loading-a-new-game>)
+    * [**When is the Game finished**](<#when-is-the-game-finished>)
     * [**Error 404**](<#error-404>)
     * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -235,7 +236,7 @@ Extra Info : I used cards starting by 00 as a undisplayed card.
 
 To display a Card, I use :
 - innerHTML Attribute to display the image
-- Alt attribute to storage the points of each Card 
+- Alt attribute to store the points of each Card 
 - The ID attribute with "ImageCard" as a base name + (1,2 or 3 means first, second or third Card) + "Player1" or "Player2"
 
 So for example, we can reach the points of the third card of the Player 2 (Computer) like this :
@@ -266,6 +267,34 @@ setTimeout to wait 3 sec and then the function RunGame() is launched again :
 ![SetTimeout](assets/images/readme-images/SetTimeout.png)
 
 [Back to top](<#contents>)
+
+* ## When is the game finished
+
+  ### How do we stop the Game ?
+It's a no ending Game, one new Game will be generated after revealing the result of current game.
+The score will be incremented (+1 point) to the winner of the current game and a new game is loading.
+So if you want to stop playing do the following :
+
+- put the link of this game into your bookmark 
+
+![bookmark step 1](assets/images/readme-images/bookmark01.png)
+
+- Then Click on "Done" Button
+
+![bookmark step 2](assets/images/readme-images/bookmark02.png)
+
+- Then close the brownser window
+
+![bookmark step 3](assets/images/readme-images/bookmark03.png)
+
+- To get back to the game
+
+![bookmark step 4](assets/images/readme-images/bookmark04.png)
+
+
+[Back to top](<#contents>)
+
+
 
 
 * ## Error 404

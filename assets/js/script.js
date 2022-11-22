@@ -154,7 +154,8 @@ function CalculateScore() {
 /**
  * Function RunGame()
  * This function will start the game :
- * - Give 2 displayed cards to both player
+ * - Give 2 displayed cards to both player : example , AddCard(1, 'player1', SelectCard());
+ * - Give a third Card with value 0 as undisplayed : example, AddCard(3, 'player1', 0);
  * - Checking the score of both player :
  *      - Disable the "i-am-good" button for Player 1 if score is smaller then Player 2
  */
