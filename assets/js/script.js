@@ -16,7 +16,7 @@
              CardFaceItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">`;
      }
  }
- //Display the Card into the Help Bubble
+ //Displaying Cards images into the Help Bubble
  let DisplayCardFaceItems = document.getElementById('AllFaceCard');
  DisplayCardFaceItems.appendChild(CardFaceItems);
  let DisplayCardNormalItems = document.getElementById('AllNormalCard');
@@ -25,7 +25,7 @@
  //Config of Gaming sound
  const soundYouLoose = new Audio('assets/sounds/youloose.mp3');
  const soundYouWin = new Audio('assets/sounds/youwin.mp3');
- //If click on Sound On button then we display Sound Off buttton
+ //If click on Sound On button then we display Sound Off button
  let soundOn = document.getElementById('SoundBoxOn');
  soundOn.addEventListener('click', () => {
      document.getElementById("SoundBoxOn").style.display = "none";
@@ -93,7 +93,7 @@
      let gameFinish = false;
      let scorePlayer = CalculateScore();
      if ((scorePlayer[0] == scorePlayer[1]) && (parseInt(document.getElementById('ImageCard3player2').alt) != 0)) {
-         //If Both players have both more than 21 OR have the same score then Draw Game
+         //If Both players have the same score and all cards displayed then Draw Game
          ShowResult('draw', WithSound);
          gameFinish = true;
      } else if (scorePlayer[0] > 21) {
@@ -149,10 +149,10 @@
  
  /**
   * Function RunGame()
-  * This function will start the game by :
+  * This function will start the game :
   * - Give 2 displayed cards to both player
   * - Checking the score of both player :
-  *      - Disable the "i-am-good" button for Player 1 if his score is smaller then Player 2
+  *      - Disable the "i-am-good" button for Player 1 if score is smaller then Player 2
   */
  function RunGame() {
      //if existing already a result from previous game we take it out and replay the VS.png animation
@@ -165,7 +165,7 @@
          element.classList.add("vs-box");
      }
  
-     //Loading Game Box hidden
+     //Loading Game Box information hidden
      document.getElementById('LoadingGame').style.display = "none";
      //We show the Versus image for a new game
      let NewDiv = document.createElement('div');

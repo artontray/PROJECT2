@@ -426,7 +426,7 @@ The method from cloning a project from GitHub is below:
 * [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
 * [VS STUDIO](https://code.visualstudio.com/) was used to edit the code.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) used for inspecting elements and fix layout issues or JavaScript bugs.
-* [Excalidraw](https://excalidraw.com/) to display the structure of the game.
+* [Excalidraw](https://excalidraw.com/) to draw the structure of the game.
 * [Readme.so](https://readme.so/) was used to write this readme File.
 
 
