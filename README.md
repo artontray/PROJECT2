@@ -469,6 +469,8 @@ The method from cloning a project from GitHub is below:
 * Background Image [Free pik Images](https://fr.freepik.com/vecteurs-libre/fond-ville-nuit-dans-neons_3824034.htm#query=fond%20jeu&position=3&from_view=keyword).
 * Win Sound are coming from [Youtube](https://www.youtube.com/watch?v=EMYOiK_iQeY).
 * Loose Sound are coming from [Youtube](https://www.youtube.com/watch?v=xZzdTK9_EXI).
+* All Cards Images are coming from [This Website](https://melusine.eu.org/syracuse/postscript/cartes01/).
+
 
 
 [Back to top](<#contents>)
