@@ -11,9 +11,13 @@
      CarteTable[i] = ['0' + i + '-carreau', '0' + i + '-coeur', '0' + i + '-pique', '0' + i + '-trefle'];
      if (i != 0) {
          //we enjoy creating the Card Table to build a display into the Help Bubble 
-         i <= 10 ?
-             CardNormalItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">` :
-             CardFaceItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">`;
+         if(i <= 10) {
+            CardNormalItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">` ;
+         }else{
+            CardFaceItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">`;
+         }
+            
+             
      }
  }
  //Displaying Cards images into the Help Bubble
@@ -86,9 +90,12 @@
  function CheckResult() {
      // We check if sound is ON
      let WithSound;
-     document.getElementById("SoundBoxOn").style.display == "block" ?
-         WithSound = 'yes' :
-         WithSound = 'no';
+     if(document.getElementById("SoundBoxOn").style.display == "block"){
+        WithSound = 'yes';
+     }else{
+        WithSound = 'no';
+     }
+         
  
      let gameFinish = false;
      let scorePlayer = CalculateScore();
@@ -205,9 +212,12 @@
  
      // If played card is King, Queen or Jack -> Point is 10
      let Points;
-     Card > 10 ?
-         Points = 10 :
-         Points = Card;
+     if(Card > 10){
+        Points = 10;
+     }else{
+        Points = Card;
+     }
+        
      // We generate a number between 0 and 3 to display a random card with selected Points -carreau, -coeur, -pique OR -trefle
      let SelectRandomCardWithSamePoints = Math.floor(Math.random() * 4);
      // We create the img src element into the DOM to display the card
@@ -236,9 +246,13 @@
   */
  function ShowResult(Result, Withsound) {
      if (Withsound == 'yes') {
-         Result == "youwin" ?
-             soundYouWin.play() :
-             soundYouLoose.play();
+        if(Result == "youwin"){
+            soundYouWin.play();
+        }else{
+            soundYouLoose.play();
+        }
+
+             
      }
      document.getElementById("ShowResult").remove();
      let NewDiv = document.createElement('div');
