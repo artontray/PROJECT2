@@ -1,0 +1,561 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');*/
+@font-face {
+    font-family: "Delius";
+    src: url("../fonts/Delius/Delius-Regular.ttf");
+}
+
+/*-------------------------INITIALIZING THE PAGE----------------------------- */
+*,
+*::before,
+*:after {
+    margin: 0;
+}
+
+/*-------------------------BODY,HTML----------------------------------------- */
+body,
+html {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Delius, Georgia, serif, Helvetica, Arial, sans-serif;
+    color: #000;
+    text-align: center;
+    opacity: .9;
+}
+
+
+/*-------------------------GENERAL VAR--------------------------------------- */
+:root {
+    /*---------------MAIN COLORS OF THE WEBSITE---------------------------------*/
+    --color-primary: rgba(127, 202, 255, 0.781);
+    --color-secondary: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
+    --color-main1: rgba(127, 202, 255, 1);
+    --color-main2: #FFF;
+}
+
+/*Box with icons Help bubble and sound On/Off*/
+.HelpAndSoundBox {
+    margin: 0;
+    display: inline-flex;
+}
+
+#help {
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.ButtonSound {
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+/*From Loading Main page, sound is Off, so we display the button Sound Off*/
+#SoundBoxOff {
+    display: block;
+}
+
+#SoundBoxOn {
+    display: none;
+}
+
+
+/* Heading */
+.heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-main2);
+}
+
+/*Heading Title images on both sides*/
+.BlackJackIcone {
+    width: 70px;
+    height: 50px;
+    vertical-align: center;
+}
+
+/*Game Area*/
+.game-area {
+    width: 100%;
+    text-align: center;
+    height: 80vh;
+    max-width: 830px;
+    padding: 1%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.TitlePlayer1,
+.TitlePlayer2 {
+    font-size: 36px;
+    width: 100%;
+}
+
+.TitlePlayer1 {
+    padding-top: 15px;
+}
+
+.TitlePlayer2 {
+    margin-top: -5px;
+}
+
+.player1 {
+    background: var(--color-primary);
+    border-bottom-left-radius: 32px;
+}
+
+.player2 {
+    background: var(--color-secondary);
+    border-top-right-radius: 32px;
+}
+
+.player1,
+.player2 {
+    height: 100%;
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    width: 50%;
+}
+
+#score-box1 {
+    background: var(--color-primary);
+    border-top-right-radius: 32px;
+    border-left: 2px solid #000;
+    border-bottom-right-radius: 32px;
+    margin-right: 30px;
+
+}
+
+#score-box2 {
+    background: var(--color-secondary);
+    border-top-left-radius: 32px;
+    border-right: 2px solid #000;
+    border-bottom-left-radius: 32px;
+    margin-left: 30px;
+}
+
+/*Card Number 1 Player 1*/
+#card1-player1 {
+    padding-top: 20px;
+    height: 25%;
+}
+
+/*Card Number 1 Player 2*/
+#card1-player2 {
+    padding-top: 80px;
+    height: 25%;
+}
+
+#card2-player1,
+#card3-player1 {
+    padding-top: 1px;
+    height: 25%;
+}
+
+#card2-player2,
+#card3-player2 {
+    padding-top: 2px;
+    height: 25%;
+}
+
+.card {
+    background-color: transparent;
+    height: 20%;
+    width: auto;
+    padding: 0 50px;
+}
+
+.card img {
+    border-radius: 8px;
+    height: 150px;
+    width: 150px;
+}
+
+/*Player Button Area*/
+.buttonBox {
+    background-color: transparent;
+    display: inline-flex;
+    height: 25%;
+    text-align: center;
+}
+
+.buttonGame {
+    padding-right: 5px;
+}
+
+/*Scoring displayed*/
+#scorePlayer1,
+#scorePlayer2 {
+    font-size: 56px;
+    font-weight: 700;
+    padding-top: 65px;
+}
+
+.scoring {
+    height: 100%;
+    width: auto;
+}
+
+.score-box {
+    height: 35%;
+    padding: 0 50px;
+}
+
+.vs-box img {
+    height: 200px;
+    width: 200px;
+}
+
+/*VS box , animation on image VS.png for each game*/
+.vs-box {
+    height: 30%;
+    background-size: cover;
+    animation-name: animation-VS;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes animation-VS {
+    from {
+        filter: blur(50px);
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/*
+
+#newgame {
+    width: 250px;
+    height: 50px;
+}
+*/
+
+button {
+    border: none;
+    background: var(--color-secondary);
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    border-radius: 32px;
+}
+
+button:hover {
+    border: 2px solid #000;
+}
+
+/*We reduce the opacity to disabled button*/
+button:disabled {
+    opacity: .5;
+}
+
+
+/*Copyright footer*/
+#copyright-footer {
+    background-color: var(--color-main1);
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+}
+
+#copyright-text {
+    font-size: small;
+    text-align: center;
+    padding-top: 5px;
+    margin: 0 auto;
+}
+
+/* HelpBox container */
+.HelpBox {
+    display: inline-block;
+}
+
+#ButtonCloseHelpBubble {
+    top: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+/* HelpBox text */
+.HelpBox .HelpBoxtext {
+    background-color: var(--color-main1);
+    border-radius: 32px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.HelpBoxtext h1 {
+    font-size: 28px;
+    padding: 5px;
+    text-align: center;
+}
+
+.HelpBoxtext p {
+    text-align: center;
+    margin: 10px;
+}
+
+/*Displayed Cards into Help Box*/
+.DisplayCard img {
+    height: 80px;
+    width: 60px;
+
+}
+
+.DisplayCard {
+    display: inline-flex;
+}
+
+
+
+/*Score of each player*/
+#WinsPlayer1,
+#WinsPlayer2 {
+    color: green;
+    background-color: #000;
+    border-radius: 50%;
+    padding : 5px;
+}
+
+
+/*Loading info Box */
+#LoadingGame {
+    background-color: var(--color-main1);
+    border-radius: 32px;
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    display: none;
+    z-index: 100;
+    top: 0;
+    color: #000;
+    font-size: 40px;
+}
+
+
+
+
+@media only screen and (max-height: 750px) {
+    .card img {
+        height: 130px;
+        width: 130px;
+    }
+}
+
+@media only screen and (max-height: 630px) {
+    .card img {
+        height: 120px;
+        width: 120px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    #SoundBoxOff,
+    #SoundBoxOn,
+    #help {
+        margin-bottom: -150px;
+    }
+
+    #heading img {
+        display: none;
+    }
+
+    .game-area {
+        width: 90%;
+        text-align: center;
+        height: 85vh;
+        max-height: 850px;
+        max-width: 830px;
+        margin: 5px 5px;
+        align-items: center;
+    }
+
+    .card {
+        padding: 2px;
+    }
+
+    #scorePlayer1 {
+        font-size: 36px;
+        padding-top: 70px;
+        margin-left: -20px;
+
+    }
+
+    #scorePlayer2 {
+        font-size: 36px;
+        padding-top: 70px;
+        margin-left: -10px;
+    }
+
+    .scoring {
+        height: 100%;
+        width: 100px;
+    }
+
+    .player1,
+    .player2 {
+        width: 40%;
+    }
+
+    #score-box1 {
+        margin-right: 10px;
+    }
+
+    #score-box2 {
+        margin-left: 10px;
+    }
+
+    button {
+        width: 225px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .vs-box {
+        height: 30%;
+        animation-name: none;
+        vertical-align: center;
+    }
+
+    .vs-box img {
+        height: 100px;
+        width: 100px;
+        padding-top: 40px;
+    }
+
+    .score-box {
+        padding: 0 40px;
+    }
+
+    .buttonBox {
+        display: list-item;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .buttonGame {
+        padding: 3px;
+    }
+
+    #copyright-footer {
+        height: 22px;
+    }
+
+    #copyright-text {
+        padding-top: 5px;
+    }
+
+    #LoadingGame {
+        width: 100%;
+        height: 25px;
+        font-size: 20px;
+    }
+
+    #card1-player1,
+    #card2-player1,
+    #card3-player1 {
+        padding-top: 10px;
+        height: 20%;
+    }
+
+    #card2-player2 {
+        padding-top: 10px;
+        height: 20%;
+    }
+
+    #card3-player2 {
+        margin-bottom: 50px;
+    }
+
+    #card1-player2 {
+        height: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 668px) {
+    .card img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .HelpBoxtext p {
+        font-size: 12px;
+    }
+
+    button {
+        width: 95px;
+        height: 35px;
+    }
+
+    .TitlePlayer2 {
+        font-size: 18px;
+        padding-top: 0;
+    }
+
+    .TitlePlayer1 {
+        font-size: 18px;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .card img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .TitlePlayer1 {
+        font-size: 14px;
+    }
+
+    .TitlePlayer2 {
+        font-size: 14px;
+
+    }
+
+    #card1-player2 {
+        padding-top: 45px;
+        height: 20%;
+    }
+
+    button {
+        width: 90px;
+        height: 22px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .card img {
+        height: 100px;
+        width: 80px;
+    }
+
+    .game-area {
+        margin-left: -15px;
+    }
+
+}
