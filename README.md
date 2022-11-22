@@ -81,31 +81,31 @@ After closing the Rules Box, the user can start playing!
 ## Programming Structure
 
 Before starting coding, I wanted to have a big picture of the programming structure :
- * Beginning of the Game :
- * 2 cards are revealed to both players, two options :
- * - Player 1 have more points than Player 2 :
- *          - Player 1 can continue with only 2 cards ("i-am-good" Click event)
- *                  - Function AddCard() for player 2 is called
- *                  - Function CheckResult() is called
- *                  - Function ShowResult() is called
- *                  - Function incrementScore('The winner') is called
- *          - Player 1 ask for a new card ("new-card" Click event)
- *                  - Function AddCard() for player 1 is called 
- *                  - Function CheckResult() is called
- *                  - If Player 1 have more points (and <= 21) than Player 2, Player 2 needs a new card
- *                          - Function AddCard() for player 2 is called
- *                          - Function CheckResult() is called
- *                          - Function ShowResult() is called
- *                          - Function incrementScore('The winner') is called
- * - Player 1 have less points than Player 2 :
- *          - Player 1 can only ask for a new card ("i-am-good" Click event is disabled)
- *              - Function AddCard() for player 1 is called 
- *              - Function CheckResult() is called
- *                  - If Player 1 have more points (and <= 21) than Player 2, Player 2 needs a new card
- *                          - Function AddCard() for player 2 is called
- *                          - Function CheckResult() is called
- *                          - Function ShowResult() is called
- *                          - Function incrementScore('The winner') is called
+ ** Beginning of the Game ** :
+ - 2 cards are revealed to both players, two options :
+  * Player 1 have more points than Player 2 :
+    * Player 1 can continue with only 2 cards ("i-am-good" Click event)
+        * Function AddCard() for player 2 is called
+            * Function CheckResult() is called
+            * Function ShowResult() is called
+            * Function incrementScore('The winner') is called
+    * Player 1 ask for a new card ("new-card" Click event)
+        * Function AddCard() for player 1 is called 
+        * Function CheckResult() is called
+            * If Player 1 have more points (<= 21) than Player 2, Player 2 need a new card
+                * Function AddCard() for player 2 is called
+                * Function CheckResult() is called
+                * Function ShowResult() is called
+                * Function incrementScore('The winner') is called
+  - Player 1 have less points than Player 2 :
+    * Player 1 can only ask for a new card ("i-am-good" Click event is disabled)
+      * Function CheckResult() is called
+      * Function AddCard() for player 1 is called 
+        * If Player 1 have more points (<= 21) than Player 2, Player 2 need a new card
+            * Function AddCard() for player 2 is called
+            * Function CheckResult() is called
+            * Function ShowResult() is called
+            * Function incrementScore('The winner') is called
 
  I also used [Excalidraw](https://excalidraw.com/) to build up the main rules of the game before coding :
 
@@ -119,6 +119,7 @@ Before starting coding, I wanted to have a big picture of the programming struct
       The font chosen were 'Delius' for all the content of the website. I have chosen
       to import the font directly from the .ttf file to avoid any problem of compatibility
       in the future.
+      
       ![Import font](assets/images/readme-images/font-delius.png)
 
  * ### Colour Scheme
@@ -428,6 +429,7 @@ The method from cloning a project from GitHub is below:
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) used for inspecting elements and fix layout issues or JavaScript bugs.
 * [Excalidraw](https://excalidraw.com/) to draw the structure of the game.
 * [Readme.so](https://readme.so/) was used to write this readme File.
+* [Tiny PNG](https://tinypng.com/) was used to compress images of the Website.
 
 
 [Back to top](<#contents>)
