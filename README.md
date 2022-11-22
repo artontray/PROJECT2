@@ -271,6 +271,7 @@ setTimeout to wait 3 sec and then the function RunGame() is launched again :
 * ## When is the game finished
 
   ### How do we stop the Game ?
+
 It's a no ending Game, one new Game will be generated after revealing the result of current game.
 The score will be incremented (+1 point) to the winner of the current game and a new game is loading.
 So if you want to stop playing do the following :
@@ -291,11 +292,9 @@ So if you want to stop playing do the following :
 
 ![bookmark step 4](assets/images/readme-images/bookmark04.png)
 
+Easy, right? :-D
 
 [Back to top](<#contents>)
-
-
-
 
 * ## Error 404
 
@@ -368,11 +367,20 @@ The HTML validator results is below:
 [Back to top](<#contents>)
 
 ### JSHINT Validator
-  The website site has been tested through the 
+  The website javascript's code has been tested through the 
   [JSHINT Validator](https://jshint.com/).
   Some Warnings shows up but only concern ES6 as below :
 
 ![style.css](assets/images/readme-images/jshint-checker.png)
+
+My mentor says that i should not consider all warning mentionning ES6, but i am curious...
+
+After some researchs, i found this as a solution :
+
+![style.css](assets/images/readme-images/jshint-checker01.png)
+
+I did it but cannot see the result because in jshint website, we copy the code to test and not the link of the project.
+
 
 [Back to top](<#contents>)
 
