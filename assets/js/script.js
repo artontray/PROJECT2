@@ -1,4 +1,45 @@
  /**
+ * CarteTable contains all the name info of each card of the game
+ * - Example 09-carreau.png, 011-carreau.png, 06-coeur.png
+ * - we use cards starting by 00 as a undisplayed card
+ * - All images of cards are in assets/images/
+ */
+let CardNormalItems = document.createElement('div');
+let CardFaceItems = document.createElement('div');
+const CarteTable = [];
+for (let i = 0; i <= 13; i++) {
+    CarteTable[i] = ['0' + i + '-carreau', '0' + i + '-coeur', '0' + i + '-pique', '0' + i + '-trefle'];
+    if (i != 0) {
+        //we enjoy creating the Card Table to build a display into the Help Bubble 
+        i <= 10 ?
+            CardNormalItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">` :
+            CardFaceItems.innerHTML += `<img src="assets/images/` + CarteTable[i][0] + `.png" alt="` + i + `">`;
+    }
+}
+//Display the Card into the Help Bubble
+let DisplayCardFaceItems = document.getElementById('AllFaceCard');
+DisplayCardFaceItems.appendChild(CardFaceItems);
+let DisplayCardNormalItems = document.getElementById('AllNormalCard');
+DisplayCardNormalItems.appendChild(CardNormalItems);
+
+//Config of Gaming sound
+const soundYouLoose = new Audio('assets/sounds/youloose.mp3');
+const soundYouWin = new Audio('assets/sounds/youwin.mp3');
+//If click on Sound On button then we display Sound Off buttton
+let soundOn = document.getElementById('SoundBoxOn');
+soundOn.addEventListener('click', () => {
+    document.getElementById("SoundBoxOn").style.display = "none";
+    document.getElementById('SoundBoxOff').style.display = "block";
+});
+//If click on Sound Off button then we display Sound On buttton
+let soundOff = document.getElementById('SoundBoxOff');
+soundOff.addEventListener('click', () => {
+    document.getElementById("SoundBoxOff").style.display = "none";
+    document.getElementById('SoundBoxOn').style.display = "block";
+});
+
+ 
+ /**
   * When loading page, we configure :
   * - We show a Help box to show up the rules of the Game -> When Closing this box:
   * 
@@ -55,7 +96,11 @@
   * - return : scorePlayer1 and scorePlayer1
   */
  function CalculateScore() {
-
+    let scorePlayer1 = parseInt(document.getElementById('ImageCard1player1').alt) + parseInt(document.getElementById('ImageCard2player1').alt) + parseInt(document.getElementById('ImageCard3player1').alt);
+    let scorePlayer2 = parseInt(document.getElementById('ImageCard1player2').alt) + parseInt(document.getElementById('ImageCard2player2').alt) + parseInt(document.getElementById('ImageCard3player2').alt);
+    document.getElementById('scorePlayer1').textContent = scorePlayer1;
+    document.getElementById('scorePlayer2').textContent = scorePlayer2;
+    return [scorePlayer1, scorePlayer2];
  }
  
  
