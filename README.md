@@ -25,6 +25,7 @@ The user will play against the computer and the project is called SimpleBJ.
     * [**Body**](<#body>)
     * [**Footer**](<#footer>)
     * [**Displaying Cards**](<#displaying-cards>)
+    * [**Loading a New Game**](<#loading-a-new-game>)
     * [**Error 404**](<#error-404>)
     * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -247,6 +248,25 @@ parseInt(document.getElementById('ImageCard3player2').alt
 ![Display Cards](assets/images/readme-images/display-card.png)
 
 [Back to top](<#contents>)
+
+
+* ## Loading a New Game
+
+  ### How do we start a new Game?
+There is nothing to do, it's auto -generated
+
+After the Result of the game has been revealed, a new game is loading automatically :
+
+![Loading a New Game](assets/images/readme-images/loading-new-game.png)
+
+When the current game is considerated as terminated, a popup appears up to 
+the main window to show up that a new game is loading. I used the function 
+setTimeout to wait 3 sec and then the function RunGame() is launched again :
+
+![SetTimeout](assets/images/readme-images/SetTimeout.png)
+
+[Back to top](<#contents>)
+
 
 * ## Error 404
 
