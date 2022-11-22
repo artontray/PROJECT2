@@ -335,21 +335,27 @@ button:disabled {
 }
 
 
-/*Loading info Box */
-#LoadingGame {
+/*Loading info Box and 404 error Message box */
+#LoadingGame,
+#Message404 {
     background-color: var(--color-main1);
     border-radius: 32px;
     position: absolute;
     width: 100%;
     height: 55px;
-    display: none;
     z-index: 100;
     top: 0;
     color: #000;
     font-size: 40px;
 }
 
+#LoadingGame{
+    display: none;
+}
 
+#Message404{
+    display: block;
+}
 
 
 @media only screen and (max-height: 750px) {
