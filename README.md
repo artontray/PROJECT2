@@ -83,7 +83,7 @@ After closing the Rules Box, the user can start playing!
 
 ## Programming Structure
 
-Before starting coding, I wanted to have a big picture of the programming structure :
+Before starting to code, I wanted to have a big picture of the programming structure :
 
  ** Beginning of the Game ** :
  - 2 cards are revealed to both players, two options :
@@ -158,7 +158,7 @@ The website should have fun colors and is intended for users as an entertainment
 * ## Body
 
    ### Middle Page
-The middle page is divided in 3 div :
+The middle page is divided in 3 div(s) :
 
 **the Player area :**
 
@@ -226,11 +226,11 @@ The footer contains informations as copyright and Name of the game
 * ## Displaying Cards
 
   ### How do we display the Card of the Game?
-I created a Table with all the name of each Card :
+I created a Table with all the names of each Card :
 (All images of cards are stored in assets/images/, 
 Example 09-carreau.png, 011-carreau.png, 06-coeur.png).
 
-Extra Info : I used cards starting by 00 as a undisplayed card.
+Extra Info : I used cards starting by 00 as an undisplayed card.
 
 ![Table of Cards](assets/images/readme-images/table-of-card.png)
 
@@ -454,7 +454,7 @@ To sum up :
 
   ![Bad layout on smaller screens](assets/images/readme-images/bug-fixed04.png)
   
-  Been working on soo many differents test with screen queries but the best solution I found is to limit
+  I ve Been working on soo many differents tests with screen queries but the best solution I found is to limit
   the access to the game in landscape positionning only for very small devices as iphone SE. 
   From the beginning, i thought this solution was not so elegant, but then i realized that almost all
   applications available on Appstore or GooglePlay are displaying content only on Portrait version (Landscape not permitted).
@@ -477,6 +477,7 @@ To sum up :
 ## Unfixed Bug
 
 It looks like deploying the website on github gives a new Error :
+
 -Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
  ![Errors](assets/images/readme-images/error01.png)
