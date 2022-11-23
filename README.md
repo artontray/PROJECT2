@@ -3,7 +3,7 @@
 This project was developed in order to demonstrate 
 some ability to code in Javascript, CSS and HTML.
 
-# Black Jack
+# Simple Black Jack Version
 
 This website have the unique purpose to present a very simple version of the famous game called BlackJack.
 The user will play against the computer and the project is called SimpleBJ.
@@ -67,7 +67,7 @@ This is the final layout of the Game:
 
 ## Site Structure
 
-SimpleBJ Game website has ONE main page. The [home page](https://artontray.github.io/PROJECT2/index.html) is the default loading page. When first loading, a box Oppens. This Box allows the user to get to know about the objectives and rules of the Game :
+SimpleBJ Game website has ONE main page. The [home page](https://artontray.github.io/PROJECT2/index.html) is the default loading page. When first loading, a box pops up. This Box allows the user to get to know about the objectives and rules of the Game :
 
 ![Rules box](assets/images/readme-images/rules.png)
 
@@ -84,9 +84,10 @@ After closing the Rules Box, the user can start playing!
 ## Programming Structure
 
 Before starting coding, I wanted to have a big picture of the programming structure :
+
  ** Beginning of the Game ** :
  - 2 cards are revealed to both players, two options :
-  * Player 1 have more points than Player 2 :
+  * Player 1 have more points than Player 2 (Computer) :
     * Player 1 can continue with only 2 cards ("i-am-good" Click event)
         * Function AddCard() for player 2 is called
             * Function CheckResult() is called
@@ -95,16 +96,15 @@ Before starting coding, I wanted to have a big picture of the programming struct
     * Player 1 ask for a new card ("new-card" Click event)
         * Function AddCard() for player 1 is called 
         * Function CheckResult() is called
-            * If Player 1 have more points (<= 21) than Player 2, Player 2 need a new card
+            * If Player 1 have more points (and <= 21) than Player 2, Player 2 need a new card
                 * Function AddCard() for player 2 is called
                 * Function CheckResult() is called
                 * Function ShowResult() is called
                 * Function incrementScore('The winner') is called
   - Player 1 have less points than Player 2 :
     * Player 1 can only ask for a new card ("i-am-good" Click event is disabled)
-      * Function CheckResult() is called
       * Function AddCard() for player 1 is called 
-        * If Player 1 have more points (<= 21) than Player 2, Player 2 need a new card
+        * If Player 1 have more points (and <= 21) than Player 2, Player 2 need a new card
             * Function AddCard() for player 2 is called
             * Function CheckResult() is called
             * Function ShowResult() is called
@@ -162,7 +162,7 @@ The middle page is divided in 3 div :
 
 **the Player area :**
 
-* 3 displayed cards
+* 2 displayed cards and 1 undisplayed Card
 
 ![Displayed Cards](assets/images/readme-images/cards01.png)
 
@@ -313,6 +313,10 @@ the HTML code for the reloading page is the following:
 As a Future Features, I would like to developp a digital currency used in-game to be able to bet an selected amount of this
 currency for each game. For that, we will need to save the Player Portfolio and also create a Faucet function in case Player has
 no more currency to bet.
+
+Also, it could be interesting for the user to choose himself the new card to pick up, as below :
+
+![Selected cards](assets/images/readme-images/cartes01.png)
 
 [Back to top](<#contents>)
 
