@@ -43,7 +43,7 @@ soundOff.addEventListener('click', () => {
 
 /**
  * When loading page, we configure :
- * - We show a Help box to show up the rules of the Game -> When Closing this box:
+ * - a Help box to show up the rules of the Game -> When Closing this box:
  * 
  *      - Two click event Listeners ("new-card" and "i-am-good") 
  *      - Rungame() function

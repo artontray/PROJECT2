@@ -89,7 +89,6 @@ html {
 .DisplayCard img {
     height: 80px;
     width: 60px;
-
 }
 
 /*Displayed Cards into Help Box Inline*/
@@ -244,6 +243,14 @@ html {
     width: auto;
 }
 
+/*Score of each player*/
+#WinsPlayer1,
+#WinsPlayer2 {
+    color: green;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 5px;
+}
 .score-box {
     height: 35%;
     padding: 0 50px;
@@ -259,14 +266,13 @@ html {
     height: 30%;
     background-size: cover;
     animation-name: animation-VS;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: backwards;
 }
 
 @keyframes animation-VS {
     from {
-        filter: blur(50px);
-        transform: rotate(180deg);
+        filter: blur(100px);
     }
 
     to {
@@ -311,15 +317,6 @@ button:disabled {
     margin: 0 auto;
 }
 
-/*Score of each player*/
-#WinsPlayer1,
-#WinsPlayer2 {
-    color: green;
-    background-color: #000;
-    border-radius: 50%;
-    padding: 5px;
-}
-
 /*Loading info Box and 404 error Message box */
 #LoadingGame,
 #Message404 {
@@ -343,14 +340,28 @@ button:disabled {
     display: block;
 }
 
-
+/*Screen queries for all different screen size*/
 @media only screen and (max-height: 750px) {
     .card img {
         height: 120px;
         width: 120px;
     }
 }
-
+/*Screen queries for all different screen size*/
+@media only screen and (max-height: 685px) {
+    .card img {
+        height: 80px;
+        width: 80px;
+    }
+}
+/*Screen queries for all different screen size*/
+@media only screen and (max-height: 750px) {
+    .card img {
+        height: 120px;
+        width: 120px;
+    }
+}
+/*Screen queries for all different screen size*/
 @media only screen and (max-width: 900px) {
 
     #SoundBoxOff,
@@ -452,7 +463,7 @@ button:disabled {
     #LoadingGame,
     #Message404 {
         height: 25px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     #card1-player1,
@@ -474,6 +485,7 @@ button:disabled {
     #card1-player2 {
         height: 20%;
     }
+
 
 }
 
@@ -504,6 +516,9 @@ button:disabled {
     .heading {
         font-size: 1rem;
     }
+    #Message404 {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 415px) {
@@ -530,6 +545,10 @@ button:disabled {
         height: 22px;
         font-size: 10px;
     }
+    #Message404 {
+        font-size: 10px;
+    }
+    
 }
 
 @media only screen and (max-width: 330px) {
