@@ -75,9 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     RunGame();
 });
 
-
-
-
 /**
  * Function CheckResult()
  * This function is called only if player 1 asked for a new card or decided to continue with only 2 Cards

@@ -448,6 +448,30 @@ To sum up :
 
   ![Much better layout for smaller screens](assets/images/readme-images/bug-fixed02.png)
 
+  - The Landscape positionning in some very small devices shows some problems of layout.
+
+  ![Bad layout on smaller screens](assets/images/readme-images/bug-fixed03.png)
+
+  ![Bad layout on smaller screens](assets/images/readme-images/bug-fixed04.png)
+  
+  Been working on soo many differents test with screen queries but the best solution I found is to limit
+  the access to the game in landscape positionning only for very small devices as iphone SE. 
+  From the beginning, i thought this solution was not so elegant, but then i realized that almost all
+  applications available on Appstore or GooglePlay are displaying content only on Portrait version (Landscape not permitted).
+
+  ![Rotate your screen](assets/images/readme-images/bug-fixed05.png)
+
+  For that I had to add a screen query into style.css file:
+
+  ![css screen queries](assets/images/readme-images/bug-fixed07.png)
+
+  And a dynamic beating icon in index.html file :
+
+  ![icon rotating screen](assets/images/readme-images/bug-fixed08.png)
+
+  For all bigger screens, landscape is available of course:
+
+  ![Landscape available](assets/images/readme-images/bug-fixed06.png)
 
 
 ## Unfixed Bug
